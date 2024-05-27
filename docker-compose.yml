@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ui:
-    image: your_dockerhub_username/python-training-ui:latest
+    image: vlutter/python-training-ui:latest
     ports:
       - "80:80"
     restart: always
@@ -10,7 +10,7 @@ services:
       - api
 
   api:
-    image: your_dockerhub_username/python-training-api:latest
+    image: vlutter/python-training-api:latest
     ports:
       - "5000:5000"
     restart: always
