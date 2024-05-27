@@ -1,0 +1,6 @@
+[submodule "python-training-api"]
+	path = python-training-api
+	url = https://github.com/vlutter/python-training-api.git
+[submodule "python-training-ui"]
+	path = python-training-ui
+	url = https://github.com/vlutter/python-training-ui.git

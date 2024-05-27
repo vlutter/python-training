@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ui:
+    build:
+      context: ./python-training-ui
+    ports:
+      - "80:80"
+
+  api:
+    build:
+      context: ./python-training-api
+    ports:
+      - "5050:5050"
