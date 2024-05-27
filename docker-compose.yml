@@ -14,3 +14,10 @@ services:
     ports:
       - "5050:5050"
     restart: always
+    volumes:
+      - db_data:/db
+    environment:
+      - DATABASE_URL=sqlite:///db/python-training.db
+
+volumes:
+  db_data:
