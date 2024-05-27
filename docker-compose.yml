@@ -3,12 +3,12 @@ version: '3'
 services:
   ui:
     build:
-      context: ./python-training-ui
+      context: vlutter/python-training-ui
     ports:
       - "80:80"
 
   api:
     build:
-      context: ./python-training-api
+      context: vlutter/python-training-api
     ports:
       - "5050:5050"
