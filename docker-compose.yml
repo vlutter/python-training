@@ -12,5 +12,5 @@ services:
   api:
     image: vlutter/python-training-api:latest
     ports:
-      - "5000:5000"
+      - "5050:5050"
     restart: always
