@@ -2,13 +2,15 @@ version: '3'
 
 services:
   ui:
-    build:
-      context: vlutter/python-training-ui
+    image: your_dockerhub_username/python-training-ui:latest
     ports:
       - "80:80"
+    restart: always
+    depends_on:
+      - api
 
   api:
-    build:
-      context: vlutter/python-training-api
+    image: your_dockerhub_username/python-training-api:latest
     ports:
-      - "5050:5050"
+      - "5000:5000"
+    restart: always
