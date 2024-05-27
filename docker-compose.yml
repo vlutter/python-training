@@ -14,10 +14,17 @@ services:
     ports:
       - "5050:5050"
     restart: always
-    volumes:
-      - db_data:/db
     environment:
-      - DATABASE_URL=sqlite:///db/python-training.db
+      - DATABASE_URL=postgresql://lyubov.pan:Lisiza-3322@db:5432/python-training
+    depends_on:
+      - db
 
-volumes:
-  db_data:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: lyubov.pan
+      POSTGRES_PASSWORD: Lisiza-3322
+      POSTGRES_DB: python-training
+    restart: always
